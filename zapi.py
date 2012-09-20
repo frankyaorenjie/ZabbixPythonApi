@@ -35,7 +35,7 @@ class ZabbixAPI(object):
             self.__dict__[name] = ZabbixAPIObjectFactory(self, name)
         return self.__dict__[name]
     def login(self):
-        user_info = {'user'    : self.__user, 
+        user_info = {'user'     : self.__user, 
                      'password' : self.__password}
         obj = self.json_obj('user.login', user_info)
         content = self.postRequest(obj)
@@ -50,7 +50,7 @@ class ZabbixAPI(object):
         if not self.isLogin():
             raise ZabbixAPIException("NOT logged in")
     def json_obj(self, method, params):
-        obj = {    'jsonrpc' : '2.0',
+        obj = { 'jsonrpc' : '2.0',
                 'method'  : method,
                 'params'  : params,
                 'auth'    : self.__auth,
