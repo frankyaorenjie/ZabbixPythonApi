@@ -7,9 +7,9 @@
 ################################################
 
 try:
-    import json
-except ImportError:
     import simplejson as json
+except ImportError:
+    import json
 
 import urllib2, subprocess, re, time
 
