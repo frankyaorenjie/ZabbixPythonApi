@@ -6,7 +6,11 @@
 # Date:   24, May, 2012
 ################################################
 
-import simplejson as json
+try:
+    import json
+except ImportError:
+    import simplejson as json
+
 import urllib2, subprocess, re, time
 
 class ZabbixAPIException(Exception):
