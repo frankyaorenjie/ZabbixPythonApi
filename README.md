@@ -1,13 +1,10 @@
-ZabbixPythonApi
-=================
+# ZabbixPythonApi
 
-Backgroud
------------------
+## Backgroud
 
 A simple way to connect to Zabbix api. It enables engineers to handle Zabbix resources more easily.
 
-Examples
------------------
+## Examples
 
 ```
 zapi = ZabbixAPI(url='http://your.zabbix.address', user='admin', password='zabbix')
@@ -22,8 +19,7 @@ group = zapi.createObject(Hostgroup, '926')
 print zapi.getHostByHostid('16913')
 ```
 
-Update History
--------------------
+## Update History
 
 ### v1.0 - 24, Nov, 2014:
 
