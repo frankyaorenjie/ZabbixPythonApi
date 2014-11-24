@@ -1,7 +1,7 @@
 ################################################
-# Python API for Zabbix v0.5
+# Python API for Zabbix v1.0
 #
-# Author: frankyao @PPTV, Shanghai, China
+# Author: frankyao @VIPS, Shanghai, China
 # Email:  baniu.yao@gmail.com
 # Date:   24, May, 2012
 ################################################
@@ -160,18 +160,3 @@ class ZabbixAPIObjectFactory(object):
     @checkAuth
     def proxyMethod(self, method_name, params):
         pass
-
-def testCase():
-    zapi = ZabbixAPI(url='http://your.zabbix.address', user='admin', password='zabbix')
-    zapi.login()
-    print zapi.Graph.find({'graphid':'49931'}, attr_name='graphid')[0]
-    hostid = zapi.Host.find({'ip':ip}, attr_name='hostid')[0]
-    print zapi.Host.exists({'filter':{'host':'BJBSJ-Zabbix-Proxy-82-225'}})
-    host = zapi.createObject(Host, 'HostToCreate')
-    item = host.getItem('444107')
-    zapi.host.get({'hostids':['16913','17411'],'output':'extend'})
-    group = zapi.createObject(Hostgroup, '926')
-    print zapi.getHostByHostid('16913')
-
-if __name__ == '__main__':
-    testCase()
