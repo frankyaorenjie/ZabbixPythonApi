@@ -1,19 +1,29 @@
-# Backgroud
+ZabbixPythonApi
+=================
+
+Backgroud
+-----------------
 
 A simple way to connect to Zabbix api. It enables engineers to handle Zabbix resources more easily.
 
-# Examples
-    zapi = ZabbixAPI(url='http://your.zabbix.address', user='admin', password='zabbix')
-    zapi.login()
-    print zapi.Graph.find({'graphid':'49931'}, attr_name='graphid')[0]
-    hostid = zapi.Host.find({'ip':ip}, attr_name='hostid')[0]
-    print zapi.Host.exists({'filter':{'host':'Zabbix-Proxy-Hostname'}})
-    host = zapi.createObject(Host, 'HostToCreate')
-    item = host.getItem('444107')
-    zapi.host.get({'hostids':['16913','17411'],'output':'extend'})
-    group = zapi.createObject(Hostgroup, '926')
-    print zapi.getHostByHostid('16913')
-# Update History
+Examples
+-----------------
+
+```
+zapi = ZabbixAPI(url='http://your.zabbix.address', user='admin', password='zabbix')
+zapi.login()
+print zapi.Graph.find({'graphid':'49931'}, attr_name='graphid')[0]
+hostid = zapi.Host.find({'ip':ip}, attr_name='hostid')[0]
+print zapi.Host.exists({'filter':{'host':'Zabbix-Proxy-Hostname'}})
+host = zapi.createObject(Host, 'HostToCreate')
+item = host.getItem('444107')
+zapi.host.get({'hostids':['16913','17411'],'output':'extend'})
+group = zapi.createObject(Hostgroup, '926')
+print zapi.getHostByHostid('16913')
+```
+
+Update History
+-------------------
 
 ### v1.0 - 24, Nov, 2014:
 
