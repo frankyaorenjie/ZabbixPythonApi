@@ -29,7 +29,7 @@ class ZabbixAPI(object):
         self.__user = user
         self.__password = password
         self._zabbix_api_object_list = ('Action', 'Alert', 'APIInfo', 'Application', 'DCheck', 'DHost', 'DRule',
-                'DService', 'Event', 'Graph', 'Grahpitem', 'History', 'Host', 'Hostgroup', 'Image', 'Item', 
+                'DService', 'Event', 'Graph', 'Graphitem', 'History', 'Host', 'Hostgroup', 'Image', 'Item', 
                 'Maintenance', 'Map', 'Mediatype', 'Proxy', 'Screen', 'Script', 'Template', 'Trigger', 'User',
                 'Usergroup', 'Usermacro', 'Usermedia')
     def __getattr__(self, name):
